@@ -14,4 +14,4 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
-          context: default
+          context: tcs-ad-dev-aks
