@@ -15,3 +15,10 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
           context: tcs-ad-dev-aks
+      - name: Kubectl tool installer
+        uses: Azure/setup-kubectl@v3
+        with:
+          # Version of kubectl
+          version: latest
+      - name: run command
+        run: "kubectl get ns"
